@@ -24,6 +24,7 @@ PE (Portable Executable) là định dạng tệp nhị phân được sử dụ
 6. Demo
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0d799def-f09a-4b39-b524-a209f0a75ccf" />
 mình đã chuẩn bị một môi trường demo và khi ấn chạy chương trình `Program.cs` thì terminal đã hiện ra chừ `hello word`
-
+khi mình bấm chạy thì file `C-sharp.dll` đã có cập nhật mới và đó là cách tạo ra file PE từ C#
+<img width="1227" height="658" alt="image" src="https://github.com/user-attachments/assets/e98fbccf-c6e7-40c5-9712-c1e3e2ce1561" />
 
 
