@@ -2,8 +2,10 @@
 
 # Lời nói đầu
 Đây là bài nghiên cứu đầu tiên của mình về RE trong cyber security có gì sai sót mong mọi người góp ý
+
 **I.** Tìm hiểu về ngôn ngữ Python, cách tạo ra file PE từ file C#.
 1. Python là gì
+
 Python là ngôn ngữ lập trình bậc cao, được giới thiệu lần đầu vào năm 1991 bởi Guido van Rossum. Python nổi bật nhờ cú pháp đơn giản, dễ đọc và có thể sử dụng trong nhiều lĩnh vực khác nhau. Vì thân thiện và mạnh mẽ, Python nhanh chóng trở thành ngôn ngữ phổ biến nhất thế giới theo nhiều bảng xếp hạng công nghệ.và có nhiều ứng dụng trong công nghệ thông tin như
 * xây dựng web
 * Phân tích dữ liệu, trực quan hóa dữ liệu
