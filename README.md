@@ -30,6 +30,9 @@ khi mình bấm chạy thì file `C-sharp.dll` đã có cập nhật mới và �
 <img width="1227" height="658" alt="image" src="https://github.com/user-attachments/assets/e98fbccf-c6e7-40c5-9712-c1e3e2ce1561" />
 
 **II.** Cách reverse file C# PE
+đây là quá trình reverse file C# gồm 3 bước
+<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/795ec304-a3aa-40df-88b9-8b16c03c8978" />
+sau đây mình sẽ demo
 cái này mình sẽ dùng công cụ `ilspy-vscode` của vscode và có một đoạn code demo do AI viết chừ mình không biết viết C#
 code demo:
 ```
@@ -90,7 +93,34 @@ và mình viết ngay một chương trình c++ đơn giản để tìm key
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bff809eb-a2f3-4d69-98d1-f7f224bff919" />
 và đã tìm thấy key
 
+**III.** Các tools chuyên sử dụng? Giới thiệu đặc tính, tính năng của tools?
+Ở đây chỉ nói về C# nên mình xin liệt kê các tool nằm trong phạm vi C#
+*dnSpyEx
+• Chức năng:Dịch ngược & Gỡ lỗi (Decompiler + Debugger)
+• Đặc điểm: Công cụ toàn diện nhất cho .NET, kết hợp giữa đọc code, chạy gỡ lỗi (debug) và chỉnh sửa file trực tiếp.
+• Tác dụng: Cho phép đặt điểm dừng (Breakpoint) để theo dõi giá trị biến khi phần mềm đang chạy; đặc biệt có thể sửa trực tiếp logic code C# (Patching) và lưu đè thành file thực thi mới.
 
+*ILSpy
+• Chức năng: Trình dịch ngược (Decompiler)
+• Đặc điểm: Mã nguồn mở, nhẹ, tích hợp trực tiếp được vào VS Code và hỗ trợ tốt các phiên bản .NET mới nhất.
+
+
+• Tác dụng: Chuyển đổi mã trung gian (IL) trong file .dll/.exe trở lại thành mã nguồn C# dễ đọc; cho phép xuất toàn bộ file thực thi thành một dự án .csproj hoàn chỉnh.
+**note**: đây là công cụ đầu tiên mà mình làm quen với reverse
+*dotPeek
+• Chức năng: Trình dịch ngược (Decompiler)
+• Đặc điểm: Công cụ miễn phí đến từ hãng JetBrains, giao diện trực quan và tương đồng với Visual Studio.
+• Tác dụng: Mạnh ở khả năng tìm kiếm tham chiếu chéo và truy vết nhanh giữa nhiều thư viện .dll liên kết với nhau trong các ứng dụng .NET quy mô lớn.
+
+*Detect It Easy (DIE)
+• Chức năng: Nhận diện & Kiểm tra sơ bộ (Triage)
+• Đặc điểm: Nhẹ, tốc độ quét nhanh, nhận diện dựa trên cấu trúc đặc trưng của file thực thi PE.
+• Tác dụng: Kiểm tra xem file thực thi có phải được viết bằng .NET (C#) hay không, sử dụng phiên bản .NET nào và có bị bọc lớp bảo vệ (Obfuscator/Packer) hay không trước khi đưa vào dịch ngược.
+
+*de4dot
+• Chức năng: Giải mã rối (Deobfuscator)
+• Đặc điểm: Công cụ chạy bằng dòng lệnh (CLI), chuyên xử lý tự động các file .NET bị làm rối mã.
+• Tác dụng: Gỡ bỏ các kỹ thuật che giấu code phổ biến trên C# (như ConfuserEx, Dotfuscator), giúp khôi phục tên hàm, tên biến dễ đọc hơn và giải mã các chuỗi ký tự bị ẩn.
 
 
 
