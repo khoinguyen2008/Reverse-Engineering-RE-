@@ -56,7 +56,7 @@ Console.ResetColor();
 static bool CheckLicenseKey(string input)
 {
     // Mảng byte đã được mã hóa bằng phép toán: (ký_tự ^ 0x13) + 2
-    int[] encryptedFlag = { 87, 72, 102, 120, 74, 37, 103, 98, 92, 114, 110 };
+    int[] encryptedFlag = { 119, 104, 114, 122, 53, 108, 126, 104 };
 
     if (input.Length != encryptedFlag.Length)
     {
@@ -83,7 +83,11 @@ sau đó mình dùng ISLpy và mình vào thư mục và chọn file `C-sharp.dl
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8675dd0-7d3b-41ae-be77-15b75f2936bb" />
 sau khi reverse bằng công cụ ILSP thì nó ra như thế này 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c1c6a3a-632b-4e3f-a912-dbea08b4a3de" />
-sau khi vào 
+sau khi vào mục program thì sẽ có công thức của key
+<img width="1674" height="954" alt="image" src="https://github.com/user-attachments/assets/a599ec7b-3d1d-4bed-b16a-7d8f00db3223" />
+và mình viết ngay một chương trình c++ đơn giản để tìm key
+
+
 
 
 
