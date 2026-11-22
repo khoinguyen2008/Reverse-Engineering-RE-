@@ -29,4 +29,61 @@ mình đã chuẩn bị một môi trường demo và khi ấn chạy chương t
 khi mình bấm chạy thì file `C-sharp.dll` đã có cập nhật mới và đó là cách tạo ra file PE từ C#
 <img width="1227" height="658" alt="image" src="https://github.com/user-attachments/assets/e98fbccf-c6e7-40c5-9712-c1e3e2ce1561" />
 
+**II.** Cách reverse file C# PE
+cái này mình sẽ dùng công cụ `ilspy-vscode` của vscode và có một đoạn code demo do AI viết chừ mình không biết viết C#
+code demo:
+```
+using System;
+
+Console.WriteLine("=== HE THONG KIEM TRA BAN QUYEN ===");
+Console.Write("Nhap License Key de kich hoat: ");
+string? userInput = Console.ReadLine();
+
+if (!string.IsNullOrEmpty(userInput) && CheckLicenseKey(userInput))
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("\n[+] Chuc mung! Ban da kich hoat phan mem thanh cong.");
+}
+else
+{
+    Console.ForegroundColor = ConsoleColor.Red;
+    Console.WriteLine("\n[-] Sai License Key! Vui long thu lai.");
+}
+
+Console.ResetColor();
+
+// Hàm kiểm tra mật khẩu bí mật
+static bool CheckLicenseKey(string input)
+{
+    // Mảng byte đã được mã hóa bằng phép toán: (ký_tự ^ 0x13) + 2
+    int[] encryptedFlag = { 87, 72, 102, 120, 74, 37, 103, 98, 92, 114, 110 };
+
+    if (input.Length != encryptedFlag.Length)
+    {
+        return false;
+    }
+
+    for (int i = 0; i < input.Length; i++)
+    {
+        int transformed = (input[i] ^ 0x13) + 2;
+        if (transformed != encryptedFlag[i])
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+```
+sau đó mình chạy thử code và nó ra như thế này
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8f7b4f98-ae85-4fd2-b3f4-606bbf7935af" />
+bây giờ mình sẽ tiến hành dịch ngược bằng tool xem mã xác thực nó là cái gì.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2f989715-26eb-45c1-adf1-9d88449b9acf" />
+sau đó mình dùng ISLpy và mình vào thư mục và chọn file `C-sharp.dll`
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a8675dd0-7d3b-41ae-be77-15b75f2936bb" />
+sau khi reverse bằng công cụ ILSP thì nó ra như thế này 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c1c6a3a-632b-4e3f-a912-dbea08b4a3de" />
+sau khi vào 
+
+
 
