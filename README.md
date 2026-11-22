@@ -84,8 +84,11 @@ sau đó mình dùng ISLpy và mình vào thư mục và chọn file `C-sharp.dl
 sau khi reverse bằng công cụ ILSP thì nó ra như thế này 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c1c6a3a-632b-4e3f-a912-dbea08b4a3de" />
 sau khi vào mục program thì sẽ có công thức của key
-<img width="1674" height="954" alt="image" src="https://github.com/user-attachments/assets/a599ec7b-3d1d-4bed-b16a-7d8f00db3223" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c1342939-01dd-4264-8c37-8aab9aa47016" />
+
 và mình viết ngay một chương trình c++ đơn giản để tìm key
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bff809eb-a2f3-4d69-98d1-f7f224bff919" />
+và đã tìm thấy key
 
 
 
